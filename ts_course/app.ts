@@ -16,7 +16,21 @@ add(num1, num2, printResult, phrase);
 /** object type declaration */
 const person  = {
     name: 'Aditya',
-    age: 29
+    age: 29,
+    hobbies: ['Reading', 'Watching Movies']
 };
 
+/**Array type declaration */
+let stringArray : string[];
+stringArray = ['string1', 'string2']
+
+let anyArray : any[];
+anyArray = ['string', 1, true]
+
 console.log(person.name)
+
+/** Iterating through an array */
+console.log("Iterating through hobbies")
+for(const hobby of person.hobbies){
+    console.log(hobby)
+}
