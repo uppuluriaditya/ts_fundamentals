@@ -14,10 +14,16 @@ const phrase = "Result is ";
 add(num1, num2, printResult, phrase);
 
 /** object type declaration */
-const person  = {
+const person:{
+    name: string;
+    age: number;
+    hobbies: string[];
+    role: [number, string]; /** tuple. Always a fixed length */
+}  = {
     name: 'Aditya',
     age: 29,
-    hobbies: ['Reading', 'Watching Movies']
+    hobbies: ['Reading', 'Watching Movies'],
+    role: [2, 'developer']
 };
 
 /**Array type declaration */
@@ -34,3 +40,12 @@ console.log("Iterating through hobbies")
 for(const hobby of person.hobbies){
     console.log(hobby)
 }
+
+/**printing tuple */
+console.log(person.role);
+
+console.log("PUSH");
+
+person.role.push('programmer');
+
+console.log(person.role)
