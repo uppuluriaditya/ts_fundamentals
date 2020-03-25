@@ -1,65 +1,16 @@
-function add(n1: number, n2: number, printResult: boolean, phrase: string){
-    const result = n1 + n2;
-    if(printResult){
-        console.log(phrase + result);
+function combine(input1: number | string, input2: number | string){
+    let result;
+    if(typeof input1 === 'number' && typeof input2 === 'number'){
+        result = input1 + input2
+    }
+    else{
+        result = input1.toString() + input2.toString()
     }
     return result;
 }
 
-const num1 = 5;
-const num2 = 2.8;
-const printResult = true;
-const phrase = "Result is ";
+const combinedAges = combine(30, 26)
+console.log(combinedAges)
 
-add(num1, num2, printResult, phrase);
-
-
-enum Role {ARCHITECT, DEVELOPER, PROGRAMMER};
-
-/** object type declaration */
-// const person:{
-//     name: string;
-//     age: number;
-//     hobbies: string[];
-//     role: [number, string]; /** tuple. Always a fixed length */
-// }  = {
-//     name: 'Aditya',
-//     age: 29,
-//     hobbies: ['Reading', 'Watching Movies'],
-//     role: [2, 'developer']
-// };
-
-const person = {
-    name: 'Aditya',
-    age: 29,
-    hobbies: ['Reading', 'Watching Movies'],
-    role: Role.DEVELOPER
-};
-
-/**Array type declaration */
-let stringArray : string[];
-stringArray = ['string1', 'string2']
-
-let anyArray : any[];
-anyArray = ['string', 1, true]
-
-console.log(person.name)
-
-/** Iterating through an array */
-console.log("Iterating through hobbies")
-for(const hobby of person.hobbies){
-    console.log(hobby)
-}
-
-/**printing tuple */
-console.log(person.role);
-
-// console.log("PUSH");
-
-// person.role.push('programmer');
-
-// console.log(person.role)
-
-if (person.role = Role.DEVELOPER){
-    console.log("You are a developer");
-}
+const combinedNames = combine("Aditya", "Uppuluri")
+console.log(combinedNames)
