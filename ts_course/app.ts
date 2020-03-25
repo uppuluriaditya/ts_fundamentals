@@ -13,17 +13,27 @@ const phrase = "Result is ";
 
 add(num1, num2, printResult, phrase);
 
+
+enum Role {ARCHITECT, DEVELOPER, PROGRAMMER};
+
 /** object type declaration */
-const person:{
-    name: string;
-    age: number;
-    hobbies: string[];
-    role: [number, string]; /** tuple. Always a fixed length */
-}  = {
+// const person:{
+//     name: string;
+//     age: number;
+//     hobbies: string[];
+//     role: [number, string]; /** tuple. Always a fixed length */
+// }  = {
+//     name: 'Aditya',
+//     age: 29,
+//     hobbies: ['Reading', 'Watching Movies'],
+//     role: [2, 'developer']
+// };
+
+const person = {
     name: 'Aditya',
     age: 29,
     hobbies: ['Reading', 'Watching Movies'],
-    role: [2, 'developer']
+    role: Role.DEVELOPER
 };
 
 /**Array type declaration */
@@ -44,8 +54,12 @@ for(const hobby of person.hobbies){
 /**printing tuple */
 console.log(person.role);
 
-console.log("PUSH");
+// console.log("PUSH");
 
-person.role.push('programmer');
+// person.role.push('programmer');
 
-console.log(person.role)
+// console.log(person.role)
+
+if (person.role = Role.DEVELOPER){
+    console.log("You are a developer");
+}
