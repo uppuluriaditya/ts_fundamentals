@@ -1,16 +1,11 @@
-function combine(input1: number | string, input2: number | string){
-    let result;
-    if(typeof input1 === 'number' && typeof input2 === 'number'){
-        result = input1 + input2
-    }
-    else{
-        result = input1.toString() + input2.toString()
-    }
-    return result;
+
+/**callback functions */
+
+function addAndHandle(num1: number, num2: number, cb: (num) => void){
+    let result = num1 + num2;
+    cb(result)
 }
 
-const combinedAges = combine(30, 26)
-console.log(combinedAges)
-
-const combinedNames = combine("Aditya", "Uppuluri")
-console.log(combinedNames)
+addAndHandle(10, 20, (data) => {
+    console.log("print data", data);
+});
