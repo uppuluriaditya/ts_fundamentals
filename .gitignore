@@ -1,2 +1,5 @@
 github
 github.pub
+
+ts_course/node_modules
+ts_course/*.js
