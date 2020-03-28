@@ -1,28 +1,16 @@
+/** Classes */
 
-/**callback functions */
+class Animal{
+    name: string;
 
-function addAndHandle(num1: number, num2: number, cb: (num: number) => void){
-    let result = num1 + num2;
-    cb(result)
+    constructor(name:string){
+        this.name = name
+    }
+
+    walk(distance: number){
+        console.log("me " + this.name + " and i am walking for " + distance + " meters")
+    }
 }
 
-addAndHandle(10, 20, (data) => {
-    console.log("print data", data);
-});
-
-/** Interfaces */
-interface RectangleOptions {
-    width: number;
-    length: number;
-};
-
-function drawRectangle(options: RectangleOptions){
-    let width = options.width
-    let length = options.length
-    console.log("Got coordinates: ", width, length)
-}
-
-drawRectangle({
-    width: 100,
-    length: 20
-});
+let animal = new Animal("tiger")
+animal.walk(10)
