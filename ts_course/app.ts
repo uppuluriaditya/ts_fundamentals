@@ -1,7 +1,7 @@
 
 /**callback functions */
 
-function addAndHandle(num1: number, num2: number, cb: (num) => void){
+function addAndHandle(num1: number, num2: number, cb: (num: number) => void){
     let result = num1 + num2;
     cb(result)
 }
