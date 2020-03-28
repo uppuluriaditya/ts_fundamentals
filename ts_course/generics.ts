@@ -45,3 +45,13 @@ const makeFullNameC = <T extends { firstName: string; lastName: string }>(obj: T
 }
 
 console.log(makeFullNameC({ firstName: "Aditya", lastName: "Uppuluri", age: 30 }));
+
+/** interfaces */
+interface Tab<T>{
+    id: string,
+    position : number,
+    data : T
+};
+
+type NumberTab = Tab<number>;
+type StringTab = Tab<string>;
